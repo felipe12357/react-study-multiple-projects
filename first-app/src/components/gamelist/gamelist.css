@@ -1,0 +1,6 @@
+.gamelist {
+    width:90vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem,1fr));
+    gap: 2rem;
+}

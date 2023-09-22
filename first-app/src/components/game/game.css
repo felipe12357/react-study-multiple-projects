@@ -1,0 +1,29 @@
+.game {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding:2rem;
+    text-align: center;
+}
+
+.game img {
+    width:100%;
+    object-fit: cover;
+}
+
+.game{
+    
+    h2 {
+    margin-top:1rem;
+    font-size: 1rem;
+    }
+
+    h4 {
+        color:'#617d98';
+        font-size: '.75rem';
+        margin-top: '.5rem';
+    }
+}
+
+.game h5{
+    text-align: right;
+}
