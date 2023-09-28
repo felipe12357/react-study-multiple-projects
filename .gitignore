@@ -2,6 +2,7 @@
 
 # dependencies
 /1.first-app/node_modules
+/2.backroads/node_modules
 .pnp
 .pnp.js
 

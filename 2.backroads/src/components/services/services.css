@@ -1,0 +1,39 @@
+.service {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: var(--clr-grey-9);
+
+    .service__section__title::after {
+        content:" SERVICES";
+        color:var(--clr-primary-5);
+    }
+
+    .service__container {
+        margin-top: 3rem;
+        display: flex;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .service__item {
+        display: flex;
+
+        >:first-child {
+            display: flex;
+            background-color: var(--clr-primary-4);
+            align-items: center;
+            padding:0rem 2rem;
+        }
+        
+        .service__title{
+            margin-top: 0px;
+        }
+
+        >:not(:first-child) {
+           
+            margin-left:1rem;
+            text-align: left;
+        }
+    }
+}
+
