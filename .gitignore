@@ -3,6 +3,8 @@
 # dependencies
 /1.first-app/node_modules
 /2.backroads/node_modules
+/3.fundamentals/node_modules
+/4.birthday-reminder/node_modules
 .pnp
 .pnp.js
 

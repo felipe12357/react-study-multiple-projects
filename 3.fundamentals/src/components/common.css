@@ -1,0 +1,26 @@
+.profile {
+    background-color: var(--color-white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 5px 0px;
+    padding: 5px;
+    width: 40vw;
+    display:flex;
+    border-radius: 10px;
+
+    .profile__img {
+       width:25%;
+       border-radius: 20%;
+    }
+
+    .profile__data{   
+        display: flex;
+        flex-wrap: wrap;
+        width:75%;
+        align-content: center;
+        margin-left: 15px;
+    }
+
+    .profile__data *{
+        flex:1 1 100%;  
+    }
+}
