@@ -1,0 +1,11 @@
+.container{
+    background-color: var(--white);
+    padding:1rem 2rem;
+}
+
+.btn--pink{
+    background-color: var(--primary-500);
+    color:white;
+    width: 100%;
+    text-align: center;
+}
