@@ -1,34 +1,46 @@
 
 import { Fragment } from 'react'
-/* import UseStageCounter from './components/UseStageCounter'
-import UseStageDeleteElementsArray from './components/UseStageDeleteElementsArray/';
-import UseStageObjects  from './components/UseStageObjects';
-import UseStageTimer from './components/UseStageTimer'; */
-import UseEffect from './components/UseEffect';
-import UseEffectFetchData from './components/UseEffectFetchData';
-import UseEffectConditionalRender from './components/UseEffectConditionalRender';
-import VanillaCircuitEvaluation from './components/VanillaCircuitEvaluation';
-import {VanillaCircuitEvaluationLogin} from './components/VanillaCircuitEvaluationLogin'
+import {
+  VanillaIncompleteApiResponse,
+  VanillaCircuitEvaluationLogin,
+  VanillaCircuitEvaluation,
+  UseEffectConditionalRender,
+  UseEffectFetchData,UseEffect,
+  UseStageTimer,
+  UseStageObjects,
+  UseStageDeleteElementsArray,
+  UseStageCounter,
+  Forms,
+  FormsMultipleInputs,
+  FormWithFormData
+} from './components/index'
 function App() {
   return (
     <Fragment>
-{/*       <UseStageCounter></UseStageCounter>
+       <UseStageCounter></UseStageCounter>
       <hr></hr>
-      <UseStageDeleteElementsArray/>
+      <Forms></Forms>
+      <hr></hr>
+      <FormsMultipleInputs></FormsMultipleInputs>
+      <hr></hr>
+      <FormWithFormData></FormWithFormData>
+{ /*     <UseStageDeleteElementsArray/>
       <hr></hr>
       <UseStageObjects/>
       <hr></hr>
       <UseStageTimer />
-      <hr></hr> */}
+      <hr></hr> 
       <UseEffect/>
       <hr></hr>
       <VanillaCircuitEvaluation></VanillaCircuitEvaluation>
       <hr></hr>
       <VanillaCircuitEvaluationLogin></VanillaCircuitEvaluationLogin>
       <hr></hr>
+      <VanillaIncompleteApiResponse></VanillaIncompleteApiResponse>
+      <hr></hr>
       <UseEffectConditionalRender></UseEffectConditionalRender>
       <hr></hr>
-      <UseEffectFetchData></UseEffectFetchData>
+      <UseEffectFetchData></UseEffectFetchData> */}
     </Fragment>
   )
 }
