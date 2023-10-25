@@ -1,0 +1,35 @@
+.colorElement {
+    width:200px;
+    height:200px;
+    display:flex;
+    padding: 20px;
+}
+
+.color-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-color {
+    margin-bottom: 25px;
+    display: flex;
+
+    >*{
+        margin-right:10px
+    }
+
+    .form-input {
+        border:2px solid var(--grey-400);
+        border-radius: 5px;
+        padding:10px;
+    }
+
+    :first-child {
+        height: 40px;
+        padding: 0px;
+    }
+}
+
+.light-text {
+    color:white;
+}
