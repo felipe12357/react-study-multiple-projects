@@ -12,19 +12,22 @@ import {
   UseStageCounter,
   Forms,
   FormsMultipleInputs,
-  FormWithFormData
+  FormWithFormData,
+  UseRef
 } from './components/index'
 function App() {
   return (
     <Fragment>
-       <UseStageCounter></UseStageCounter>
+      <UseRef></UseRef>
+      <hr></hr>
+      { /*        <UseStageCounter></UseStageCounter>
       <hr></hr>
       <Forms></Forms>
       <hr></hr>
       <FormsMultipleInputs></FormsMultipleInputs>
       <hr></hr>
       <FormWithFormData></FormWithFormData>
-{ /*     <UseStageDeleteElementsArray/>
+      <UseStageDeleteElementsArray/>
       <hr></hr>
       <UseStageObjects/>
       <hr></hr>

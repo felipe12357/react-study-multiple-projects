@@ -11,8 +11,10 @@ import VanillaIncompleteApiResponse from './VanillaIncompleteApiResponse';
 import Forms from './Forms';
 import { FormsMultipleInputs } from './FormsMultipleInputs';
 import {FormWithFormData} from './FormWithFormData';
+import  UseRef  from './UseRef';
 
 export {VanillaIncompleteApiResponse,VanillaCircuitEvaluationLogin, VanillaCircuitEvaluation,
     UseEffectConditionalRender,UseEffectFetchData,UseEffect,UseStageTimer,UseStageObjects,
-    UseStageDeleteElementsArray,UseStageCounter,Forms,FormsMultipleInputs,FormWithFormData
+    UseStageDeleteElementsArray,UseStageCounter,Forms,FormsMultipleInputs,FormWithFormData,
+    UseRef
 }
