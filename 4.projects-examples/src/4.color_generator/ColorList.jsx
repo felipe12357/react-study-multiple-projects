@@ -1,11 +1,11 @@
 
 import PropTypes from 'prop-types';
-import {SingleColor} from './SingleColor';
+import SingleColor from './SingleColor';
 
 const ColorList = ({colorList}) => {
   return (
     <div className='color-container'>
-        { colorList.map( (color,index) => <SingleColor key={index} hex={color.hex} weight={color.weight}></SingleColor> )}
+        { colorList.map( (color,index) => <SingleColor key={index} index={index} hex={color.hex} weight={color.weight}></SingleColor> )}
     </div>
   )
 }

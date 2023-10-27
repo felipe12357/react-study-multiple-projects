@@ -2,7 +2,7 @@
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 
-const SingleColor = ({hex,weight,key}) => {
+const SingleColor = ({hex,weight,index}) => {
 
     const handleClick=async(color)=>{
         if(navigator.clipboard){
@@ -14,7 +14,7 @@ const SingleColor = ({hex,weight,key}) => {
     }
   return (
     <span  onClick={()=>handleClick(hex)}
-                        className={key < 5 ? 'colorElement' : 'colorElement light-text'} 
+                        className={index < 5 ? 'colorElement' : 'colorElement light-text'} 
                         style={{backgroundColor:hex}}>
                         {hex} - {weight}
                 </span>
@@ -22,7 +22,7 @@ const SingleColor = ({hex,weight,key}) => {
 }
 SingleColor.propTypes = {
     hex:PropTypes.string,
-    weight:PropTypes.string,
-    key:PropTypes.number
+    weight:PropTypes.number,
+    index:PropTypes.number
 };
 export default SingleColor
