@@ -4,13 +4,15 @@ import './App.css'
 import Tours from './2.Tours/tours';
 import Lorem from './3.lorem_paragrafs/lorem';
 import ColorGenerator from './4.color_generator/ColorGenerator';
+import GroceryBud from './5.Grocery_Bud/GroceryBud';
 function App() {
   return (
     <Fragment>
       {/* <Birthday></Birthday> */}
       {/* <Tours/> */}
      {/*  <Lorem></Lorem> */}
-     <ColorGenerator></ColorGenerator>
+    {/*  <ColorGenerator></ColorGenerator> */}
+    <GroceryBud></GroceryBud>
     </Fragment>
   )
 }

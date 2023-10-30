@@ -1,0 +1,50 @@
+
+.overwritte-class .grocery {
+    padding:20px;
+    background-color: white;
+    border: 0px;
+    box-shadow: var(--shadow-2);
+}
+.centered {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.grocery{
+    width:600px;
+    text-align: center;
+    letter-spacing: 2px;
+
+    .input-container{
+        :first-child {
+            width:70%;
+            box-sizing: border-box;
+            height:40px;
+            margin-right: 1px;
+            border-color: var(--green-primary);
+            margin-bottom: 35px;
+        }
+
+        :nth-child(2){
+            width:25%;
+            box-sizing: border-box;
+            height:40px;
+        }
+    }
+
+    .grocery-item {
+        display:grid;
+        grid-template-columns: 10% 70% 20%;
+        margin-bottom: 15px;
+        text-transform: capitalize;
+
+        :nth-child(2){
+            justify-self: left;
+        }
+    }
+
+    .checked {
+        text-decoration: line-through;
+    }
+}

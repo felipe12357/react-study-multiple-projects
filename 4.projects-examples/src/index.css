@@ -74,7 +74,7 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 5px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -82,6 +82,16 @@ button {
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
+}
+
+.button--primary {
+  background-color: var(--green-primary);
+  color:white;
+}
+
+.button--delete {
+  background-color: var(--red-dark);
+  color:white;
 }
 
 button:focus,
@@ -146,4 +156,8 @@ button:focus-visible {
   .btn-block {
       width:100%
   }
+}
+
+.center {
+  text-align: center;
 }
