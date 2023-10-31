@@ -13,11 +13,16 @@ import {
   Forms,
   FormsMultipleInputs,
   FormWithFormData,
-  UseRef
+  UseRef,
+  CustomHooksToogle,
+  CustomHookFetchData
 } from './components/index'
 function App() {
   return (
     <Fragment>
+      <CustomHookFetchData></CustomHookFetchData>
+     {/*  <CustomHooksToogle></CustomHooksToogle> */}
+      <hr></hr>
       <UseRef></UseRef>
       <hr></hr>
       { /*        <UseStageCounter></UseStageCounter>

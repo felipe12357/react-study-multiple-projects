@@ -12,9 +12,12 @@ import Forms from './Forms';
 import { FormsMultipleInputs } from './FormsMultipleInputs';
 import {FormWithFormData} from './FormWithFormData';
 import  UseRef  from './UseRef';
+import CustomHooksToogle from './CustomHooksToogle';
+import CustomHookFetchData from './CustomHookFetchData';
 
 export {VanillaIncompleteApiResponse,VanillaCircuitEvaluationLogin, VanillaCircuitEvaluation,
     UseEffectConditionalRender,UseEffectFetchData,UseEffect,UseStageTimer,UseStageObjects,
     UseStageDeleteElementsArray,UseStageCounter,Forms,FormsMultipleInputs,FormWithFormData,
-    UseRef
+    UseRef,
+    CustomHooksToogle,CustomHookFetchData
 }
