@@ -15,15 +15,18 @@ import {
   FormWithFormData,
   UseRef,
   CustomHooksToogle,
-  CustomHookFetchData
+  CustomHookFetchData,
+  ContextAPINavbar
 } from './components/index'
 function App() {
   return (
     <Fragment>
+      <ContextAPINavbar></ContextAPINavbar>
+      <hr></hr>
       <CustomHookFetchData></CustomHookFetchData>
      {/*  <CustomHooksToogle></CustomHooksToogle> */}
-      <hr></hr>
-      <UseRef></UseRef>
+     
+      {/* <UseRef></UseRef> */}
       <hr></hr>
       { /*        <UseStageCounter></UseStageCounter>
       <hr></hr>

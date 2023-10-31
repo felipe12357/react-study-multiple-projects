@@ -14,10 +14,12 @@ import {FormWithFormData} from './FormWithFormData';
 import  UseRef  from './UseRef';
 import CustomHooksToogle from './CustomHooksToogle';
 import CustomHookFetchData from './CustomHookFetchData';
+import ContextAPINavbar from './ContextAPINavbar';
 
 export {VanillaIncompleteApiResponse,VanillaCircuitEvaluationLogin, VanillaCircuitEvaluation,
     UseEffectConditionalRender,UseEffectFetchData,UseEffect,UseStageTimer,UseStageObjects,
     UseStageDeleteElementsArray,UseStageCounter,Forms,FormsMultipleInputs,FormWithFormData,
     UseRef,
-    CustomHooksToogle,CustomHookFetchData
+    CustomHooksToogle,CustomHookFetchData,
+    ContextAPINavbar
 }

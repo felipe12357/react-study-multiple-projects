@@ -79,6 +79,38 @@
     }
 }
 
+.navbar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-container{
+        display:flex;
+        align-items: center;
+    }
+
+    .nav-links {
+        display:flex;
+        list-style-type:none;
+
+        .link {
+            margin: 10px 10px;
+        }
+    }
+
+    .btn {
+        margin-left:10px
+    }
+
+    
+}
+
+
+
+
+
+
+
 
 
 
