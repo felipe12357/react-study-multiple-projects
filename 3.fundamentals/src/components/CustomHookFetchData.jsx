@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 import './common.css';
 const CustomHookFetchData = () => {
     const url = 'https://api.github.com/users';
-    const {getData,dataList,isLoading,isError} =UseCustomHookFetchData(url,1);
+    //a datalist la renombro con el alias de userList
+    const {getData,dataList:userList,isLoading,isError} =UseCustomHookFetchData(url,1);
 
     useEffect(()=>{
         getData();
@@ -17,7 +18,7 @@ const CustomHookFetchData = () => {
             <div>CustomHookFetchData</div>
             { isLoading ? 'Loading content': 
                 isError ? 'There was an error' :
-                <DisplayUser user={dataList[0]}></DisplayUser>
+                <DisplayUser user={userList[0]}></DisplayUser>
             }
         </Fragment>
     )

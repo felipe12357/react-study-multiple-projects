@@ -11,12 +11,15 @@ const UseCustomHookFetchData = (url,amount) => {
 
         (async ()=>{
             setIsLoading(true);
-            const response = await fetch(url);
-            setIsError(!response.ok)
-            const dataListResponse = await response.json();
-            const dataListT = dataListResponse.filter((val, index)=> {return index<amount});
-            setData(dataListT);
-
+            try {
+                const response = await fetch(url);
+                setIsError(!response.ok)
+                const dataListResponse = await response.json();
+                const dataListT = dataListResponse.filter((val, index)=> {return index<amount});
+                setData(dataListT);
+            }catch(e){
+                setIsError(true)
+            }
             //La api retorna la informacion muy rapido por ello simulo 3 segundos
             setTimeout(()=>{
                 setIsLoading(false);
