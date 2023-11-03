@@ -15,11 +15,14 @@ import  UseRef  from './UseRef';
 import CustomHooksToogle from './CustomHooksToogle';
 import CustomHookFetchData from './CustomHookFetchData';
 import ContextAPINavbar from './ContextAPINavbar';
+import {ContextAPIGlobalExample,ContextAPIGlobalContext,UseContextAPIGlobal} from './ContextAPIGlobalExample';
+import ContextAPIGlobalDummyTestComponent from './ContextAPIGlobalDummyTestComponent';
 
 export {VanillaIncompleteApiResponse,VanillaCircuitEvaluationLogin, VanillaCircuitEvaluation,
     UseEffectConditionalRender,UseEffectFetchData,UseEffect,UseStageTimer,UseStageObjects,
     UseStageDeleteElementsArray,UseStageCounter,Forms,FormsMultipleInputs,FormWithFormData,
     UseRef,
     CustomHooksToogle,CustomHookFetchData,
-    ContextAPINavbar
+    ContextAPINavbar,ContextAPIGlobalExample,ContextAPIGlobalContext, UseContextAPIGlobal,
+    ContextAPIGlobalDummyTestComponent
 }

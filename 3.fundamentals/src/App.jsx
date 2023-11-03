@@ -16,14 +16,23 @@ import {
   UseRef,
   CustomHooksToogle,
   CustomHookFetchData,
-  ContextAPINavbar
+  ContextAPINavbar,
+  ContextAPIGlobalExample,
+  UseContextAPIGlobal,
+  ContextAPIGlobalDummyTestComponent
 } from './components/index'
 function App() {
   return (
     <Fragment>
-      <ContextAPINavbar></ContextAPINavbar>
+{/*       <ContextAPINavbar></ContextAPINavbar>
       <hr></hr>
-      <CustomHookFetchData></CustomHookFetchData>
+      <CustomHookFetchData></CustomHookFetchData> */}
+      <ContextAPIGlobalExample>
+        <div>
+          hello world 
+          <ContextAPIGlobalDummyTestComponent></ContextAPIGlobalDummyTestComponent>
+        </div>
+      </ContextAPIGlobalExample> 
      {/*  <CustomHooksToogle></CustomHooksToogle> */}
      
       {/* <UseRef></UseRef> */}
