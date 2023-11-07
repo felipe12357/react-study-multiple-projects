@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Card from './Card';
-import data from '../data';
+import { data } from '../data';
 import './birthday.css';
 function Birthday() {
     const [people,setPeople] = useState(data);
