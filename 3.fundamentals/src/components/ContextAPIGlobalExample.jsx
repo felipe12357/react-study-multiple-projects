@@ -17,11 +17,6 @@ export const ContextAPIGlobalExample = (props) => {
     )
 }
 
-
-export const UseCustomContextAPIGlobalContext = ()=>{
-    
-}
-
 ContextAPIGlobalExample.propTypes = {
     children: PropTypes.node,
 }

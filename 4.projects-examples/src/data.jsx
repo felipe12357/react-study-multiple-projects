@@ -1,4 +1,4 @@
-import { FaBehance, FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaBehance, FaFacebook, FaLinkedin, FaTwitter, FaHome,FaFolderOpen,FaQuestion,FaUserFriends,FaUserAlt} from 'react-icons/fa';
 
 export const data = [
     {
@@ -38,26 +38,31 @@ export const data = [
       id: 1,
       url: '/',
       text: 'home',
+      icon: <FaHome />,
     },
     {
       id: 2,
       url: '/about',
       text: 'about',
+      icon: <FaQuestion/>
     },
     {
       id: 3,
       url: '/projects',
       text: 'projects',
+      icon: <FaFolderOpen />,
     },
     {
       id: 4,
       url: '/contact',
       text: 'contact',
+      icon: <FaUserFriends />
     },
     {
       id: 5,
       url: '/profile',
       text: 'profile',
+      icon: <FaUserAlt />
     },
   ];
   

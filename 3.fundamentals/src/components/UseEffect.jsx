@@ -24,6 +24,7 @@ const UseEffect = () => {
         //este es el equivalente a NG-onInit
          console.log('se ejecuta solo cuando carga');
          return ()=>{
+            //equivalente a NG destroy
             console.log('se ejecuta cuando se destruye el componente')
          }
      },[])

@@ -85,12 +85,15 @@ nav {
         gap: 0.5rem;
     }
 
-    .links {
-        display:flex;
-        gap:0.5rem
+    nav {
+        .links {
+            display:flex;
+            gap:0.5rem
+        }
+    
+        .links a {
+           padding:0px
+        }
     }
 
-    .links a {
-       padding:0px
-    }
 }
