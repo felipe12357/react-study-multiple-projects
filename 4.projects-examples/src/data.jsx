@@ -88,3 +88,41 @@ export const data = [
       icon: <FaBehance />,
     },
   ];
+
+  export const cellphoneList= [
+    {
+      id: 1,
+      title: 'Apple iPhone 11',
+      price: 599.99,
+      img: 'https://m.media-amazon.com/images/I/61MG3m5FhIL._AC_UL320_.jpg',
+      amount: 1,
+    },
+    {
+      id: 2,
+      title: 'Motorolla Moto G',
+      price: 499.99,
+      img: 'https://m.media-amazon.com/images/I/51bfhhUKhTL._AC_UL320_.jpg',
+      amount: 1,
+    },
+    {
+      id: 3,
+      title: 'Apple iPhone 12',
+      price: 699.99,
+      img: 'https://m.media-amazon.com/images/I/51fYXSnSu9L._AC_UL320_.jpg',
+      amount: 1,
+    },
+    {
+      id: 4,
+      title: 'Samsung Galaxy S21',
+      price: 899.99,
+      img: 'https://m.media-amazon.com/images/I/61jYjeuNUnL._AC_UL320_.jpg',
+      amount: 1,
+    },
+    {
+      id: 5,
+      title: 'Samsung Galaxy S21',
+      price: 799.99,
+      img: 'https://m.media-amazon.com/images/I/717yeZFskGL._AC_UL320_.jpg',
+      amount: 1,
+    },
+  ]

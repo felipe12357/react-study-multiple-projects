@@ -9,9 +9,11 @@ import Navbar from './6.Navbar/Navbar';
 import SideBarModal from './7.SideBarModal/SideBarModal';
 import {ContextGlobalProvider} from './7.SideBarModal/ContextGlobalProvider';
 import  ContextAPINotGlobalProvider  from './8.SideBarModalNotGlobalContext/ContextAPINotGlobalProvider';
+import ShoppingCart from './9.Shopping_Car/ShoppingCart'
+import { CartGlobalContextProvider } from './9.Shopping_Car/globalContext/GlobalContextProvider'
 import { useState } from 'react'
 function App() {
-  const [currentView,setCurrentView] = useState(0);
+  const [currentView,setCurrentView] = useState('ShoppingCart');
   return (
     <main className='app-main'> 
       <div className='app-menu'>
@@ -30,6 +32,8 @@ function App() {
         <div className="app-element" onClick={()=>setCurrentView('ContextGlobalProvider')}>7. ContextProvider - createContext as child content</div>
         <hr></hr>
         <div className="app-element" onClick={()=>setCurrentView('ContextAPINotGlobalProvider')}>8. ContextProvider</div>
+        <hr></hr>
+        <div className="app-element" onClick={()=>setCurrentView('ShoppingCart')}>9. Shopping Cart</div>
       </div>
       <div className='app-container'>
         {currentView ==='Birthday' &&<Birthday></Birthday> }
@@ -43,6 +47,10 @@ function App() {
           <SideBarModal></SideBarModal>
         </ContextGlobalProvider> }
         {currentView ==='ContextAPINotGlobalProvider' &&<ContextAPINotGlobalProvider></ContextAPINotGlobalProvider> }
+        {currentView ==='ShoppingCart' &&
+         <CartGlobalContextProvider>
+              <ShoppingCart></ShoppingCart>
+         </CartGlobalContextProvider>}
       </div>
     </main>
   )
