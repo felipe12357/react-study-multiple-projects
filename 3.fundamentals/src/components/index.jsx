@@ -19,6 +19,7 @@ import {ContextAPIGlobalExample,ContextAPIGlobalContext,UseContextAPIGlobal} fro
 import ContextAPIGlobalDummyTestComponent from './ContextAPIGlobalDummyTestComponent';
 import UseReducerBasics from './UseReducerBasics';
 import { MemoPerformance } from './MemoPerformance/';
+import  Lazyloading  from './Lazyloading';
 
 export {VanillaIncompleteApiResponse,VanillaCircuitEvaluationLogin, VanillaCircuitEvaluation,
     UseEffectConditionalRender,UseEffectFetchData,UseEffect,UseStageTimer,UseStageObjects,
@@ -26,5 +27,5 @@ export {VanillaIncompleteApiResponse,VanillaCircuitEvaluationLogin, VanillaCircu
     UseRef,
     CustomHooksToogle,CustomHookFetchData,
     ContextAPINavbar,ContextAPIGlobalExample,ContextAPIGlobalContext, UseContextAPIGlobal,
-    ContextAPIGlobalDummyTestComponent,UseReducerBasics,MemoPerformance
+    ContextAPIGlobalDummyTestComponent,UseReducerBasics,MemoPerformance,Lazyloading
 }
