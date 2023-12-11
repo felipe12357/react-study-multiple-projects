@@ -18,7 +18,8 @@ import {
   ContextAPINavbar,
   ContextAPIGlobalExample,
   UseReducerBasics,
-  ContextAPIGlobalDummyTestComponent
+  ContextAPIGlobalDummyTestComponent,
+  MemoPerformance
 } from './components/index'
 import { useState } from 'react'
 import './App.css';
@@ -54,6 +55,7 @@ function App() {
             <div className="app-element" onClick={()=>setCurrentView('VanillaIncompleteApiResponse')}>VanillaIncompleteApiResponse</div>
             <div className="app-element" onClick={()=>setCurrentView('VanillaCircuitEvaluation')}>VanillaCircuitEvaluation</div>
             <div className="app-element" onClick={()=>setCurrentView('VanillaCircuitEvaluationLogin')}>VanillaCircuitEvaluationLogin</div>
+            <div className="app-element" onClick={()=>setCurrentView('Performance')}>Performance - memo</div>
         </div>
         <div className='app-container'>
             {currentView ==='UseStageCounter' && <UseStageCounter></UseStageCounter>}
@@ -86,7 +88,8 @@ function App() {
 
             {currentView ==='VanillaIncompleteApiResponse' && <VanillaIncompleteApiResponse></VanillaIncompleteApiResponse>}
             {currentView ==='VanillaCircuitEvaluation' && <VanillaCircuitEvaluation></VanillaCircuitEvaluation> }
-            {currentView ==='VanillaCircuitEvaluationLogin' && <VanillaCircuitEvaluationLogin></VanillaCircuitEvaluationLogin> }
+            {currentView ==='VanillaCircuitEvaluationLogin' && <VanillaCircuitEvaluationLogin></VanillaCircuitEvaluationLogin>}
+            {currentView ==='Performance' && <MemoPerformance></MemoPerformance> }
         </div>
       </main>         
   )
