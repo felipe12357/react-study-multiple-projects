@@ -6,7 +6,8 @@
 /3.fundamentals/node_modules
 /4.birthday-reminder/node_modules
 /5.Axios-react/node_modules
-.pnp
+/6.react-query/node_modules
+/server/node_modules
 .pnp.js
 
 # testing
