@@ -61,7 +61,7 @@ export const UseDeleteReactQueryCustomHook = (queryKey) => {
             toast.error(error.response.data)
         },
         onSuccess:(data)=>{
-            queryClient.invalidateQueries({queryKey:['tasks']})
+            queryClient.invalidateQueries({queryKey:[queryKey]})
         }
     })
 

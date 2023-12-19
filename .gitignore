@@ -8,6 +8,8 @@
 /5.Axios-react/node_modules
 /6.react-query/node_modules
 /server/node_modules
+/7.unsplash-images/node_modules
+/7.unsplash-images/.env
 .pnp.js
 
 # testing
