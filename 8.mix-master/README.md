@@ -1,8 +1,10 @@
-# React + Vite
+Project with react-router-dom for handling routes.
+this library also allows to works with actions and loading phases in the pages
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+@tanstack/react-query: for handling data
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![sample 1]('./samples/image_1.png')
+![sample 2]('./samples/image_2.png')
+![sample 3]('./samples/video.mp4')
+
