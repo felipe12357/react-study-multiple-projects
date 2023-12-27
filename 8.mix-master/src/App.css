@@ -1,0 +1,26 @@
+
+
+p {
+    line-height: 2;
+    color: var(--grey-500);
+    text-align: justify;
+}
+
+
+.main-error-container {
+    text-align: center;
+    padding-top: 8rem;
+
+    h1 {
+        margin-bottom:0;
+    }
+
+    p {
+        text-align: center;
+        margin-top:0;
+    }
+
+    img {
+        width:70vh;
+    }
+}

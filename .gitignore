@@ -9,6 +9,7 @@
 /6.react-query/node_modules
 /server/node_modules
 /7.unsplash-images/node_modules
+/8.mix-master/node_modules
 /7.unsplash-images/.env
 .pnp.js
 

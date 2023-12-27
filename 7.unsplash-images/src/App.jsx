@@ -11,7 +11,6 @@ function App() {
   
   return (  
       <main className={`main-theme ${isDarkTheme ? 'dark-background' : 'highlight-background'}`}>
-         donde eputas estao {isDarkTheme} fin
         <ThemeToggle></ThemeToggle>
         <SearchForm></SearchForm>
         <Gallery></Gallery>

@@ -1,0 +1,13 @@
+.newsletter {
+    margin:0 auto;
+    margin-top: 50px;
+    width: 70%;
+    background-color: var(--white);
+    padding:30px;
+    border-radius: 8px;
+    box-shadow: 2px 5px 10px var(--grey-300);
+
+    >:nth-child(1){
+        text-align: center;
+    }
+}
