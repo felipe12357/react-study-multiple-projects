@@ -11,7 +11,7 @@ npm run dev
 se incluyo un servidor para algunos proyectos:
 6.react-query
 
-para ejecutarlo simplemente : npm start
+para ejecutarlo se ingresa a la carpeta server y luego: npm start
 
 
 documentacion para el proyecto: 6.react-query
