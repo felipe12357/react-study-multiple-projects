@@ -42,6 +42,7 @@ https://tailwindcss.com/docs/guides/vite
 ## OTher libraries 
 
     https://www.npmjs.com/package/react-router-dom
+    https://reactrouter.com/en/main/start/tutorial
     npm i --save react-router-dom
 
     npm install --save react-icons
@@ -51,3 +52,7 @@ https://tailwindcss.com/docs/guides/vite
 
     https://axios-http.com/docs/example
     npm install --save axios 
+
+## API documentation
+
+    https://documenter.getpostman.com/view/18152321/2s9Xy5KpTi

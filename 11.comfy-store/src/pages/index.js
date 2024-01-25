@@ -11,3 +11,5 @@ export {default  as SingleProduct} from './SingleProduct/SingleProduct';
 export {default as MainLayout } from './MainLayout';
 export {default as Header } from '../components/Header';
 export {default as NavBar} from '../components/NavBar';
+export {default as SinglePageError} from './Error/SinglePageError';
+export {default as SectionTitle} from '../common/SectionTitle';

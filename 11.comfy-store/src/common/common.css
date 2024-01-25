@@ -1,0 +1,13 @@
+.custom-radio-input {
+    border: solid  oklch(var(--b1));
+}
+
+.custom-radio-input:checked {
+    border-color:var(--selectedColor) ;
+}
+
+.loading-position {
+    left:42%;
+    right:50%
+}
+
