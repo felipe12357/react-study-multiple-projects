@@ -9,7 +9,7 @@ export const calculateTotals=(productList)=>{
         totalPrice = totalPrice + (parseInt(product.amount)*product.price);
     }
 
-    totalPrice = totalPrice.toFixed(2)
+    totalPrice = parseFloat(totalPrice.toFixed(2))
 
     return {totalAmount,totalPrice}
 }

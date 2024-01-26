@@ -9,12 +9,13 @@ const SingleProduct = () => {
   const dispatch = useDispatch();
   const {attributes:productData,id:productId} = useLoaderData();
   const [state_color,setColor] = useState(productData.colors[0]);
-  const [state_amount,setAmount] = useState(0);
+  const [state_amount,setAmount] = useState(1);
 
   const handleFormSubmit = ()=>{
     dispatch(addItem({ 
         ...productData,
         cartID:productId + state_color,
+        selectedColor:state_color,
         id:productId,
         amount:state_amount
     }))
@@ -23,8 +24,8 @@ const SingleProduct = () => {
   return (
     <>
     <section className="grid gap-10 md:grid-cols-2">
-        <figure className='place-self-center'>
-            <img src={productData.image} alt={productData.title} className='rounded-lg object-cover '></img>
+       <figure className='place-self-center'>
+            <img src={productData.image} alt={productData.title} className='rounded-lg object-cover sm:h-3/4 sm:w-3/4'></img>
         </figure>
        <div>
         <h1 className="capitalize text-3xl font-medium">{productData.title}</h1>
@@ -48,14 +49,14 @@ const SingleProduct = () => {
             <span className="text-md">Amount</span>
           </div>
           <div>
-            <select className="select select-primary" value={state_amount}  onChange={e=>setAmount(parseInt(e.target.value))}>
+            <select className="select select-primary select-sm" value={state_amount}  onChange={e=>setAmount(parseInt(e.target.value))}>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
             </select>
           </div>
           <div className="mt-4">
-            <button type="button" className='btn btn-primary mt-4' onClick={handleFormSubmit}>Add To Bag</button>
+            <button type="button" className='btn btn-primary mt-4 btn-sm' onClick={handleFormSubmit}>Add To Bag</button>
           </div>
         </form>
        </div>

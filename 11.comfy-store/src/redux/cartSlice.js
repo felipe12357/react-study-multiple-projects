@@ -21,7 +21,6 @@ const cartSlice = createSlice({
     initialState:getCartStateLocalStorage(),
     reducers:{
         addItem:(state,{payload})=>{
-
             const position = state.cartItems.findIndex((product)=>payload.cartID === product.cartID)
             if(position>=0)
                 state.cartItems[position].amount += payload.amount
@@ -29,21 +28,19 @@ const cartSlice = createSlice({
                 state.cartItems.push(payload);
 
             cartSlice.caseReducers.generateTotals(state);
-            toast.success('Product added to the cart!')
+            toast.success('Product added to the cart!');
         },
         clearCart:(state) =>{
             state = defaultState;
             localStorage.setItem('cartState',JSON.stringify(state))
         },
         removeItem:(state,{payload}) =>{
-            state.cartItems = state.cartItems.filter(product => product.id !== payload.id);
-            toast.success('Product removed from the cart!')
+            state.cartItems = state.cartItems.filter(product => product.cartID !== payload )
             cartSlice.caseReducers.generateTotals(state);
         },
-        editItem:(state,{payload})=>{
-            const cartItem = state.cartItems.find(item=>item.id=== payload.cartID);
-            cartItem=payload.value;
-            toast.success('Product updated in the cart!')
+        editItemAmount:(state,{payload})=>{
+            const cartItem = state.cartItems.find(item=>item.cartID=== payload.cartID);
+            cartItem.amount=payload.amount;
             cartSlice.caseReducers.generateTotals(state);
         },
         generateTotals:(state)=>{
@@ -51,10 +48,10 @@ const cartSlice = createSlice({
             state.numItemsInCart = totalAmount;
             state.totalWithOutTaxes = totalPrice;
             state.tax = 0.1 * totalPrice;
-            state.total = state.tax + totalPrice;
+            state.total = state.tax + totalPrice + state.shipping;
             localStorage.setItem('cartState',JSON.stringify(state))
         }
     }
 })
-export const {clearCart,editItem,addItem,removeItem} = cartSlice.actions;
+export const {clearCart,editItemAmount,addItem,removeItem,generateTotals} = cartSlice.actions;
 export default cartSlice.reducer;
