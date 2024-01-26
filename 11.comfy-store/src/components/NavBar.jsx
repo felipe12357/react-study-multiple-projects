@@ -1,21 +1,23 @@
-import {React, useState} from 'react'
+import {React, useState,memo} from 'react'
 import {  BsCart3, BsMoonFill, BsSunFill } from 'react-icons/bs';
 import { FaBars } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
 import NavLinks from './NavLinks';
-import { useEffect } from 'react';
+import { useEffect,useCallback } from 'react';
+import { useSelector } from 'react-redux';
 
 const themes = ['dim','cmyk'];
 
 const NavBar = () => {
     const [theme,setTheme] = useState(themes[0]);
+    const { numItemsInCart } = useSelector((store)=>store.cart);
 
-   const handleTheme =()=>{
+   const handleTheme =useCallback(()=>{
         const newTheme = (theme===themes[0]) ? themes[1]: themes[0]
         setTheme(newTheme);
         document.documentElement.setAttribute('data-theme',newTheme);
         localStorage.setItem('currentTheme',newTheme)
-   }
+   })
 
    useEffect(()=>{
         const currentTheme = localStorage.getItem('currentTheme');
@@ -60,7 +62,7 @@ const NavBar = () => {
                     <div className='indicator'>
                         <BsCart3 className='h-6 w-6' />
                         <span className='badge badge-sm badge-primary indicator-item'>
-                            8
+                            { numItemsInCart }
                         </span>
                     </div>
                 </NavLink>
@@ -70,4 +72,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default memo(NavBar)

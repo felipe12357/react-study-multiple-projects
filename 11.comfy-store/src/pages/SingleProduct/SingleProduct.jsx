@@ -1,17 +1,24 @@
 import {React, useState} from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { UseFetchData } from '../../hooks/UseHandlerAPIHook'; 
 import {formatPrice } from '../../utils/format-price';
 import '../../common/common.css';
-//por aca puedo obtener los parametros de la url
-export const product_loader =async({params})=>{
-  const response = await UseFetchData(`products/${params.id}`);
-  return response.data;
-}
+import {addItem}  from '../../redux/cartSlice';
+import { useDispatch } from 'react-redux';
+
 const SingleProduct = () => {
-  const {attributes:productData} = useLoaderData();
+  const dispatch = useDispatch();
+  const {attributes:productData,id:productId} = useLoaderData();
   const [state_color,setColor] = useState(productData.colors[0]);
   const [state_amount,setAmount] = useState(0);
+
+  const handleFormSubmit = ()=>{
+    dispatch(addItem({ 
+        ...productData,
+        cartID:productId + state_color,
+        id:productId,
+        amount:state_amount
+    }))
+  }
 
   return (
     <>
@@ -48,7 +55,7 @@ const SingleProduct = () => {
             </select>
           </div>
           <div className="mt-4">
-            <button type="button" className='btn btn-primary mt-4'>Add To Bag</button>
+            <button type="button" className='btn btn-primary mt-4' onClick={handleFormSubmit}>Add To Bag</button>
           </div>
         </form>
        </div>

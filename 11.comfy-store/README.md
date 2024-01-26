@@ -53,6 +53,14 @@ https://tailwindcss.com/docs/guides/vite
     https://axios-http.com/docs/example
     npm install --save axios 
 
+    https://redux-toolkit.js.org/introduction/getting-started
+
+    npm install react-redux
+    npm install @reduxjs/toolkit
+
+    https://www.npmjs.com/package/react-toastify
+    npm install --save react-toastify
+
 ## API documentation
 
     https://documenter.getpostman.com/view/18152321/2s9Xy5KpTi

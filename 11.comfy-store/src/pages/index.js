@@ -1,13 +1,17 @@
-export {default  as About} from './About/About';
-export {default  as Cart } from './Cart/Cart';
-export {default  as Checkout} from './Checkout/Checkout';
+
+import  { lazy } from 'react';
+export const About = lazy(()=>import('./About/About'));
+export const Cart = lazy(()=>import('./Cart/Cart'));
+export const Checkout = lazy(()=>import('./Checkout/Checkout'));
+export const Home = lazy(()=>import('./Home/Home'));
+export const Orders = lazy(()=>import('./Orders/Orders'));
+export const Products = lazy(()=>import('./Products/Products'));
+export const Register = lazy(()=>import('./Register/Register'));
+export const SingleProduct = lazy(()=>import('./SingleProduct/SingleProduct'));
+
+
 export {default  as Error} from './Error/Error';
-export {default  as Home} from './Home/Home';
 export {default  as Login} from './Login/Login';
-export {default  as Orders} from './Orders/Orders';
-export {default  as Products} from './Products/Products';
-export {default  as Register} from './Register/Register';
-export {default  as SingleProduct} from './SingleProduct/SingleProduct';
 export {default as MainLayout } from './MainLayout';
 export {default as Header } from '../components/Header';
 export {default as NavBar} from '../components/NavBar';

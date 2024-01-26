@@ -31,7 +31,7 @@ const queryClient = new QueryClient({defaultOptions:{
 function App() {
   return (
     <>
-      <ToastContainer position='top-center' autoClose={2000}></ToastContainer>
+      <ToastContainer position='top-center' autoClose={1000}></ToastContainer>
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router}></RouterProvider>
         <ReactQueryDevtools initialIsOpen={true} ></ReactQueryDevtools>
