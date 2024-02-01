@@ -4,7 +4,7 @@ import FeatureProducts from './FeatureProducts';
 
 const Home = () => {
   return (
-    <>
+    <> 
         <InfoHome></InfoHome>
         <FeatureProducts></FeatureProducts>
     </>

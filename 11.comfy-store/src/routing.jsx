@@ -1,10 +1,15 @@
 import  { createBrowserRouter } from 'react-router-dom';
 import { About,Cart,Checkout,Error,Home,Login,MainLayout,Orders,Products,Register,SingleProduct,SinglePageError } from './pages';
 import { home_loader } from './pages/Home/home.loader';
-import { product_loader } from './pages/SingleProduct/product.loader'
+import { product_loader } from './pages/SingleProduct/product.loader';
 import { products_loader } from './pages/Products/producs.loader';
 import  Loading  from './components/Loading';
 import { Suspense } from 'react';
+import { register_action } from './pages/Register/Register.action';
+import { login_action } from './pages/Login/login.action';
+import { store } from './redux/store.js';
+import { checkout_action } from './pages/Checkout/checkout.action.jsx';
+import { checkout_loader } from './pages/Checkout/checkout.loader.jsx';
 
 export const routes = createBrowserRouter([{
     path:'/',
@@ -43,7 +48,9 @@ export const routes = createBrowserRouter([{
         { path: 'checkout', element:
             <Suspense fallback={<Loading/>}>
                 <Checkout></Checkout>
-            </Suspense>
+            </Suspense>,
+            action:(params)=>checkout_action(params,store),
+            loader:(params)=>checkout_loader(params,store)
         },
         { path: 'orders', element:
             <Suspense fallback={<Loading/>}>
@@ -53,11 +60,19 @@ export const routes = createBrowserRouter([{
     ]
 },{
     path:'/register',
-    element:<Register />,
-    errorElement:<Error/>
+    element:
+    <Suspense fallback={<Loading/>}>
+        <Register />,
+    </Suspense>,
+    errorElement:<Error/>, action:register_action
 },{
     path:'/login',
-    element:<Login />,
-    errorElement:<Error/>
+    element:
+    <Suspense fallback={<Loading/>}>
+        <Login />,
+    </Suspense>,
+    errorElement:<Error/>,
+    //asi hago para poderle enviarma como parametro el store
+    action:(params)=>login_action(params,store)
 }
 ])

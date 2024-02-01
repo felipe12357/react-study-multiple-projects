@@ -8,10 +8,10 @@ export const Orders = lazy(()=>import('./Orders/Orders'));
 export const Products = lazy(()=>import('./Products/Products'));
 export const Register = lazy(()=>import('./Register/Register'));
 export const SingleProduct = lazy(()=>import('./SingleProduct/SingleProduct'));
+export const Login = lazy(()=>import('./Login/Login'));
 
 
 export {default  as Error} from './Error/Error';
-export {default  as Login} from './Login/Login';
 export {default as MainLayout } from './MainLayout';
 export {default as Header } from '../components/Header';
 export {default as NavBar} from '../components/NavBar';

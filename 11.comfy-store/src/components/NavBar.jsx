@@ -1,32 +1,27 @@
-import {React, useState,memo} from 'react'
+import {React,memo} from 'react'
 import {  BsCart3, BsMoonFill, BsSunFill } from 'react-icons/bs';
 import { FaBars } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
 import NavLinks from './NavLinks';
-import { useEffect,useCallback } from 'react';
-import { useSelector } from 'react-redux';
+import { useCallback,useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { toogleTheme } from '../redux/userSlice';
 
 const themes = ['dim','cmyk'];
 
 const NavBar = () => {
-    const [theme,setTheme] = useState(themes[0]);
     const { numItemsInCart } = useSelector((store)=>store.cart);
+    const { theme } = useSelector((store)=>store.user);
+    const dispatch = useDispatch();
 
    const handleTheme =useCallback(()=>{
-        const newTheme = (theme===themes[0]) ? themes[1]: themes[0]
-        setTheme(newTheme);
-        document.documentElement.setAttribute('data-theme',newTheme);
-        localStorage.setItem('currentTheme',newTheme)
+        const newTheme = (theme===themes[0]) ? themes[1]: themes[0];
+        dispatch(toogleTheme(newTheme));
    })
 
    useEffect(()=>{
-        const currentTheme = localStorage.getItem('currentTheme');
-        if(currentTheme){
-            document.documentElement.setAttribute('data-theme',currentTheme);
-            setTheme(currentTheme)
-        }
-   },[])
-
+        document.documentElement.setAttribute('data-theme',theme);
+    },[])
 
   return (
     <nav className='bg-base-200'>
