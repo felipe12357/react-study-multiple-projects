@@ -10,6 +10,7 @@ import { login_action } from './pages/Login/login.action';
 import { store } from './redux/store.js';
 import { checkout_action } from './pages/Checkout/checkout.action.jsx';
 import { checkout_loader } from './pages/Checkout/checkout.loader.jsx';
+import { orders_loader } from './pages/Orders/orders.loader.jsx';
 
 export const routes = createBrowserRouter([{
     path:'/',
@@ -25,7 +26,7 @@ export const routes = createBrowserRouter([{
         },
         { path: 'products', element:
             <Suspense fallback={<Loading/>}>
-                 <Products></Products>,
+                 <Products></Products>
             </Suspense>,
             errorElement:<SinglePageError/>,loader:products_loader
         },
@@ -55,7 +56,8 @@ export const routes = createBrowserRouter([{
         { path: 'orders', element:
             <Suspense fallback={<Loading/>}>
                 <Orders></Orders>
-            </Suspense>
+            </Suspense>,
+            loader:(params)=>orders_loader(params,store)
         }
     ]
 },{

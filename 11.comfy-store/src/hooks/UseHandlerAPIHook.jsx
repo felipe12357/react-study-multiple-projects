@@ -2,14 +2,12 @@ import { globalAxiosInstance } from  '../utils/axios-config';
 
 
 export const UseFetchData = async(urlSegment,params=null,token) =>{
-    let response;
-    if(token){
-        response = await globalAxiosInstance.get(`/${urlSegment}`,params,{ 
-            headers: { 'Authorization': `Bearer ${token}`}
-        })
-    }else
-        response = await globalAxiosInstance.get(`/${urlSegment}`,{params});
+  
+    const paramsTosend = (token) ? 
+        {params:{...params},headers:{ 'Authorization': `Bearer ${token}`}}
+        :{params}
 
+    const response = await globalAxiosInstance.get(`/${urlSegment}`,{...paramsTosend});
     return response.data;
 } 
 

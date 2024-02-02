@@ -11,7 +11,7 @@ const Pagination = ({pageInfo}) => {
     }
 
   return (
-    <div className="join flex justify-end">
+    <div className="join flex ">
         {
             (page>1) &&
             <>

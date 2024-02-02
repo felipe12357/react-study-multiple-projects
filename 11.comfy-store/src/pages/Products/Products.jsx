@@ -42,7 +42,10 @@ const Products = () => {
           <ProductList  productList={productData}></ProductList> :
           <ProductGrid productList={productData}></ProductGrid>
       }
-      <Pagination pageInfo={meta.pagination}/>
+      <div className='flex justify-end'>
+        <Pagination pageInfo={meta.pagination}/>
+      </div>
+     
     </>
   )
 }

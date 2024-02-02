@@ -1,12 +1,17 @@
 import { validationRoute } from "../../utils/validation-route"
 import { UseFetchData } from '../../hooks/UseHandlerAPIHook'; 
-ç
-export const orders_loader =async(params,store)=>{
+import { redirect } from 'react-router-dom';
+
+export const orders_loader =async({request},store)=>{
     if (!validationRoute(store)){
          return redirect('/login')
     }
 
-    const response = await UseFetchData('products?featured=true');
-    return response.data;
-
+    const URLSearchParams = new URL(request.url).searchParams;
+    const paramsObject = Object.fromEntries(URLSearchParams);
+    
+    const params = (URLSearchParams.size >0) ? paramsObject : "";
+    const {user:userState} = store.getState();
+    const response = await UseFetchData('orders',params,userState.user.token);
+    return response;
 }
