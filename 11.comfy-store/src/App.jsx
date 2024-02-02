@@ -1,11 +1,16 @@
 
 import './App.css'
-import { routes } from './routing';
+import { routes,queryClient } from './routing';
 import { RouterProvider } from 'react-router-dom';
+import { QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 function App() {
   return (
     <>
-      <RouterProvider router={routes}></RouterProvider>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={routes}></RouterProvider>
+        <ReactQueryDevtools initialIsOpen={true} />
+      </QueryClientProvider>
     </>
   )
 }

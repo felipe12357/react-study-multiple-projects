@@ -1,13 +1,18 @@
 import { globalAxiosInstance } from  '../utils/axios-config';
 
-
-export const UseFetchData = async(urlSegment,params=null,token) =>{
+export const UseFetchData = async(urlSegment,queryData,params=null,token=null) =>{
   
     const paramsTosend = (token) ? 
         {params:{...params},headers:{ 'Authorization': `Bearer ${token}`}}
         :{params}
 
-    const response = await globalAxiosInstance.get(`/${urlSegment}`,{...paramsTosend});
+
+    const fetchQuery = {
+        queryKey: [queryData.key,params],
+        queryFn: () => globalAxiosInstance.get(`/${urlSegment}`,{...paramsTosend}),
+      }; 
+    
+    const response = await queryData.queryClient.ensureQueryData(fetchQuery);
     return response.data;
 } 
 

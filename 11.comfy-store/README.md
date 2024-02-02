@@ -61,6 +61,15 @@ https://tailwindcss.com/docs/guides/vite
     https://www.npmjs.com/package/react-toastify
     npm install --save react-toastify
 
+
+    "@tanstack/react-query-devtools": "^5.14.5",
+
+    https://tanstack.com/query/latest
+    npm i @tanstack/react-query
+
+    https://tanstack.com/query/v4/docs/framework/react/devtools
+    npm i @tanstack/react-query-devtools
+
 ## API documentation
 
     https://documenter.getpostman.com/view/18152321/2s9Xy5KpTi

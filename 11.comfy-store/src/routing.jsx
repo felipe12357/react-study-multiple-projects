@@ -11,6 +11,16 @@ import { store } from './redux/store.js';
 import { checkout_action } from './pages/Checkout/checkout.action.jsx';
 import { checkout_loader } from './pages/Checkout/checkout.loader.jsx';
 import { orders_loader } from './pages/Orders/orders.loader.jsx';
+import { QueryClient } from '@tanstack/react-query';
+
+
+export const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: 1000 * 60 * 5,
+      },
+    },
+  });
 
 export const routes = createBrowserRouter([{
     path:'/',
@@ -22,19 +32,22 @@ export const routes = createBrowserRouter([{
             <Suspense fallback={<Loading/>}>
                  <Home></Home>
             </Suspense>, 
-            errorElement:<SinglePageError/>,loader:home_loader
+            errorElement:<SinglePageError/>,
+            loader:()=>home_loader(queryClient)
         },
         { path: 'products', element:
             <Suspense fallback={<Loading/>}>
                  <Products></Products>
             </Suspense>,
-            errorElement:<SinglePageError/>,loader:products_loader
+            errorElement:<SinglePageError/>,
+            loader:(params)=>products_loader(params,queryClient)
         },
         { path: 'product/:id', element:
             <Suspense fallback={<Loading/>}>
                 <SingleProduct></SingleProduct>
             </Suspense>,
-            errorElement:<SinglePageError/>,loader:product_loader
+            errorElement:<SinglePageError/>,
+            loader:(params)=>product_loader(params,queryClient)
         },
         { path: 'cart',element:
             <Suspense fallback={<Loading/>}>
@@ -50,14 +63,14 @@ export const routes = createBrowserRouter([{
             <Suspense fallback={<Loading/>}>
                 <Checkout></Checkout>
             </Suspense>,
-            action:(params)=>checkout_action(params,store),
+            action:(params)=>checkout_action(params,store,queryClient),
             loader:(params)=>checkout_loader(params,store)
         },
         { path: 'orders', element:
             <Suspense fallback={<Loading/>}>
                 <Orders></Orders>
             </Suspense>,
-            loader:(params)=>orders_loader(params,store)
+            loader:(params)=>orders_loader(params,store,queryClient)
         }
     ]
 },{
