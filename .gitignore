@@ -12,6 +12,7 @@
 /8.mix-master/node_modules
 /7.unsplash-images/.env
 /9.webdev-portfolio/node_modules
+12.recap/node_modules
 .pnp.js
 
 # testing
