@@ -1,0 +1,143 @@
+@import './constants.scss';
+@font-face {
+  font-family: 'Pokemon';
+  src: url('./assets/fonts/pokemon/Pokemon-Solid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Moltors';
+  src: url('./assets/fonts/Moltors.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+    --color-grass:34, 139, 34;
+    --color-grass-font:34, 139, 34;
+
+    --color-rock:210, 180, 140;
+    --color-rock-font:0,0,0;
+
+    --color-fire:255, 0, 0;
+    --color-fire-font:255, 0, 0;
+
+    --color-poison:199, 21, 133;
+    --color-poison-font:199, 21, 133;
+
+    --color-poison:199, 21, 133;
+    --color-poison-font:199, 21, 133;
+
+    --color-water:65, 105, 225;
+    --color-water-font:65, 105, 225;
+
+    --color-bug:50, 205, 50;
+    --color-bug-font:50, 205, 50;
+
+    --color-flying:175, 238, 238;
+    --color-flying-font:0,0,0;
+
+    --color-electric:255, 215, 0;
+    --color-electric-font:0,0,0;
+
+    --color-ground:218, 165, 32;
+    --color-ground-font:218, 165, 32;
+
+    --color-fairy:255, 105, 180;
+    --color-fairy-font:255, 105, 180;
+
+    --color-fighting:178, 34, 34;
+    --color-fighting-font:178, 34, 34;
+
+    --color-psychic:255, 20, 147;
+    --color-psychic-font:255, 20, 147;
+
+    --color-dragon:0, 0, 139;
+    --color-dragon-font:0, 0, 139;
+
+    --color-ghost:75, 0, 130;
+    --color-ghost-font:75, 0, 130;
+
+    --color-steel:192, 192, 192;
+    --color-steel-font:0, 0, 0;
+
+    --color-steel:192, 192, 192;
+    --color-steel-font:0, 0, 0;
+
+    --color-ice:135, 206, 235;
+    --color-ice-font:0, 0, 0;
+
+    --color-dark:0,0,0;
+    --color-dark-font:0,0,0;
+
+    --color-normal:224, 224, 224;
+    --color-normal-font:0,0,0;
+}
+
+body {
+  margin: 0;
+  font-family:'Moltors';
+  height: 100%;
+  width: 100%;
+}
+
+.button {
+  background-color: $color-red;
+  padding: .75rem 10px;
+  font-family:'Moltors';
+  color:$color-white;
+  border-radius: $border-radius-style;
+  border: $border-style;
+  cursor:pointer;
+
+  &:hover, &:active{
+    background-color: $color-red-dark;
+  }
+  &.active{
+    background-color: $color-red-dark;
+  }
+}
+
+input {
+  padding: .375rem .75rem;
+  font-size:1rem;
+  background-color:$color-white;
+  border: $border-style;
+  font-family: Moltors;
+
+  &:active, &:focus {
+    outline: none ;
+    border: $border-style-widther;
+    border-color: $color-red;
+  }
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.tooltip:hover:after {
+  background: #333;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 13px;
+  position:absolute;
+} 
+
+.tooltip-container{
+  position: relative;
+  display: inline-block;
+}
+
+
+.poke{
+    &_container{
+          color:rgb(var(--dynamic-color-font));
+          background-color: rgba(var(--dynamic-color),.3);
+          border: $border-style-widther;
+          border-color:rgb(var(--dynamic-color));
+    }
+}
+

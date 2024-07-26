@@ -13,6 +13,9 @@
 /7.unsplash-images/.env
 /9.webdev-portfolio/node_modules
 12.recap/node_modules
+12.recap-jsonServer/node_modules
+13.InterviewStudy/node_modules
+14.Pokedex/node_modules
 .pnp.js
 
 # testing

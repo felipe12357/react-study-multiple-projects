@@ -1,0 +1,32 @@
+@import "../../constanst";
+
+.header{
+    background: linear-gradient($color-blue 75%,$color-red);
+    display: flex;
+    padding: $custom-padding;
+    color: $color-white;
+    font-size: $font-title;
+    letter-spacing: 1px;
+    font-weight: bold;
+    justify-content: space-between;
+    
+    img {
+        cursor:pointer
+    }
+
+    :nth-child(1){
+        padding-left:20px;
+    }
+
+
+
+    :nth-child(2) {
+        padding-right: 20px;
+        padding-top: 7px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-white;
+    }
+}

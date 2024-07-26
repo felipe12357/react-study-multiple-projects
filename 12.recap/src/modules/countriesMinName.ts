@@ -1,6 +1,6 @@
 export const countriesMinName = [
     { country:"Argentina",min:"AR"},
-    { country:"Bolivia",min:"BL"},
+    { country:"Bolivia",min:"BO"},
     { country:"Brazil",min:"BR"},
     { country:"Canada",min:"CA"},
     { country:"Chile",min:"CL"},
