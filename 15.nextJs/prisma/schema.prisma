@@ -1,0 +1,50 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+//una categoria tiene muchos productos
+model Category {
+  id Int @id @default(autoincrement())
+  name String
+  slug String
+  products Product[] //este campo se hace para establecer la relacion con products
+}
+
+model Product {
+  id Int @id @default(autoincrement())
+  name String
+  price Float
+  image String
+  categoryId Int //clave foranea
+  //atributo solo para establecer la relacion
+  category Category @relation(fields: [categoryId],references: [id])
+
+  OrderProducts OrderProducts[]  //este campo se hace para establecer la relacion con OrderProducts
+}
+
+model Order{
+  id Int @id @default(autoincrement())
+  name String
+  total Float
+  date DateTime @default(now())
+  status Boolean @default(false)
+  orderReadyAt DateTime?
+  OrderProducts OrderProducts[] //este campo se hace para establecer la relacion con OrderProducts
+}
+ //Aca se trabaja la relacion de muchos a muchos
+model OrderProducts {
+  id  Int @id @default(autoincrement())
+  orderId Int
+  productId Int
+
+  quantity Int
+  order Order @relation(fields: [orderId],references: [id])
+  product Product @relation(fields: [productId],references: [id])
+
+}
