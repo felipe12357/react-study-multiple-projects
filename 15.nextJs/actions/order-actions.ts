@@ -12,7 +12,7 @@ export async function updateOrderStateAction(forma:FormData){
     const id = Number(forma.get('id'));
     await updateOrderState(id);
     //con esta linea limpio la cache de la pagina y carga la nueva informacion
-    revalidatePath('/admin/orders')    
+    revalidatePath('/admin/orders');   // esto cuando se hace solo con next js
 }
 
 export async function createOrderAction(data:OrderRequest){

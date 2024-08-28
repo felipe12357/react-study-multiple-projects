@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, Product } from "@prisma/client";
 import { OrderRequest, ProductCreation } from "./models";
 
 let prismaClient:PrismaClient;
@@ -26,8 +26,28 @@ export function getCategories(){
     });
 }
 
+export function getProductById(id:number){
+    return prismaClient.product.findMany({
+        where:{ id }
+    })
+}
+
 export function insertProduct({name,price,categoryId,image}:ProductCreation){
     return prismaClient.product.create({
+        data:{
+            name,
+            price,
+            image:'',
+            categoryId
+        }
+    })
+}
+
+export function updateProduct({name,price,categoryId,image,id}:Product){
+    return prismaClient.product.update({
+        where:{
+            id
+        },
         data:{
             name,
             price,
@@ -75,6 +95,22 @@ export const getProductsWithLimit= (skipNum: number, searchTerm?:string)=>{
         }
     });
     return  Promise.all( [productList, total] )
+}
+
+export function getOrdersReady(){
+    return prismaClient.order.findMany({
+        take:5,
+        orderBy:{ orderReadyAt:'desc'},
+        where:{ orderReadyAt:{not:null}},
+        include:{
+            OrderProducts:{
+                select:{  
+                    quantity:true,
+                    product:true
+                }
+            }
+        }   
+    })
 }
 
 export function getPendingOrders(){

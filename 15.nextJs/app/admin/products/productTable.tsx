@@ -44,6 +44,10 @@ const ProductTableComponent = ({productList}:ProductTableProps)=>{
                                             <Link href={`/admin/products/${product.id}`}
                                                 className="text-indigo-600 hover:text-indigo-800">
                                                 Editar <span className="sr-only">{product.name}</span>
+                                            </Link> /
+                                            <Link href={`/admin/products/edit-composition/${product.id}`}
+                                                className="text-indigo-600 hover:text-indigo-800">
+                                                EditarComposition <span className="sr-only">{product.name}</span>
                                             </Link>
                                         </td>
                                     </tr>

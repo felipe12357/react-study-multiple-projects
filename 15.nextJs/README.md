@@ -43,5 +43,14 @@
     corro los seed para generar la data:
         npx prisma db seed
 
+# SWR
+    https://swr.vercel.app/es-ES
+
+# Rutas
+    las rutas habilitadas son:
+        - http://localhost:3000/admin/orders
+        - http://localhost:3000/orders/cafe
+        - http://localhost:3000/orders-ready
+
 
 

@@ -2,7 +2,7 @@
 
 import HeaderComponent from "@/components/header";
 import CreateProductCompositionComponent from "./createProductComposition";
-import ProductFormCompositionComponent from "./productFormComposition";
+import ProductFormCompositionComponent from "../productFormComposition";
 
 //utilizando el patron composicion
 const CreateCompositionPage =()=>{

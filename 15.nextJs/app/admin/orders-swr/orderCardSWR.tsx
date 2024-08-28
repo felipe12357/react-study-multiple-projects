@@ -1,27 +1,15 @@
 
-import { updateOrderStateAction } from "@/actions/order-actions";
 import { OrderComplete } from "@/src/models";
 import { formatCurrency } from "@/src/utils";
-import { Order, Product } from "@prisma/client";
 
 
 type OrderCardProps = {
-    order: OrderComplete
+    order: OrderComplete,
+    updateOrderState:(id:number)=>void
 }
 
-const OrderCardComponent = ({order}:OrderCardProps) =>{
-   /*  const handleAction=async()=>{
-
-        const response = await updateOrderStateAction(order.id);
-
-        if(!response?.success && response?.error)
-            toast.error(response.error);
-
-        if(response?.success){
-            toast.success('Orden actualizada');
-        }
-    } */
- 
+const OrderCardSWRComponent = ({order,updateOrderState}:OrderCardProps) =>{
+    
     return (
         <section
             aria-labelledby="summary-heading"
@@ -42,7 +30,10 @@ const OrderCardComponent = ({order}:OrderCardProps) =>{
                 </div>
             </dl>
             
-            <form action={updateOrderStateAction}>
+            <form onSubmit={(e)=>{
+                    e.preventDefault();
+                    updateOrderState(order.id)
+                }}>
                 <input type='hidden' value={order.id} id='id' name='id'></input>
                 <button type="submit" className="bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase font-bold cursor-pointer">
                     Marcar Orden Completada
@@ -51,4 +42,4 @@ const OrderCardComponent = ({order}:OrderCardProps) =>{
         </section>
     )
 }
-export default OrderCardComponent;
+export default OrderCardSWRComponent;

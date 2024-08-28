@@ -1,10 +1,12 @@
 import { getCategories } from "@/src/primaHandler"
+import { Product } from "@prisma/client"
 
 type ProductFormComponentProps = {
-    buttonLabel:string
+    buttonLabel:string,
+    product?:Product
 }
 
-const ProductFormCompositionComponent = async({buttonLabel}:ProductFormComponentProps)=>{
+const ProductFormCompositionComponent = async({buttonLabel,product}:ProductFormComponentProps)=>{
     const categories = await getCategories()
     return (
         <>
@@ -19,6 +21,7 @@ const ProductFormCompositionComponent = async({buttonLabel}:ProductFormComponent
                     name="name"
                     className="block w-full p-3 bg-slate-100"
                     placeholder="Nombre Producto"
+                    defaultValue={product?.name}
                 />
             </div>
 
@@ -32,6 +35,7 @@ const ProductFormCompositionComponent = async({buttonLabel}:ProductFormComponent
                     name="price"
                     className="block w-full p-3 bg-slate-100"
                     placeholder="Precio Producto"
+                    defaultValue={product?.price}
                 />
             </div>
 
@@ -44,6 +48,7 @@ const ProductFormCompositionComponent = async({buttonLabel}:ProductFormComponent
                     className="block w-full p-3 bg-slate-100"
                     id="categoryId"
                     name="categoryId"
+                    defaultValue={product?.categoryId}
                 >
                     <option value="">-- Seleccione --</option>
                     {   categories.map(category =>
